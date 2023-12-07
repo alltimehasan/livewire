@@ -1,8 +1,5 @@
-<div>
+<div class="space-y-2">
     @foreach ($books as $book)
-        <div class="bg-slate-100 my-4 p-3 rounded-sm shadow-md">
-            <h2 class="text-xl font-medium">{{ $book->title }}</h2>
-            <p>By {{ $book->author }}</p>
-        </div>
+        <livewire:book-item :book="$book" wire:key="$book->id" />
     @endforeach
 </div>
